@@ -10,4 +10,6 @@ This is only a basic implementation and it's missing some features.
 1. Install and activate extension
 2. Include static typoscript template
 
-It only need a basic site structure:
+It only needs a basic site structure:
+
+![Page Tree](https://bitbucket.org/wowawebdesign/wwonepagetemplate/src/master/Resources/Public/Images/pagetree.png "Page Tree")
