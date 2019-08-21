@@ -72,3 +72,17 @@ img {
 .ce-gallery figure.video {
     display: block;
 }
+
+#pagefooter {
+    background-color: #555;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+#pagefooter a {
+    color: #fff;
+}
+
+#pagefooter p {
+    margin-bottom: 0;
+}

@@ -12,19 +12,22 @@ page.includeCSS {
 
 page.includeJSFooter {
     jquery = EXT:wwonepagetemplate/Resources/Public/JavaScript/jquery-3.4.1.min.js
+    jquery.disableCompression = 1
     popper = EXT:wwonepagetemplate/Resources/Public/JavaScript/popper.min.js
+    popper.disableCompression = 1
     bootstrap = EXT:wwonepagetemplate/Resources/Public/JavaScript/bootstrap.bundle.min.js
     bootstrap.disableCompression = 1
     custom = EXT:wwonepagetemplate/Resources/Public/JavaScript/custom.js
 }
 
 page {
+    ## Main navigation
     10 = HMENU
     10 {
         wrap (
             <nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="/">OnePage</a>
+                    <a class="navbar-brand" href="/#main">OnePage</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -69,26 +72,57 @@ page {
             }
         }
     }
-    20 = CONTENT
-	20 {
-		table = pages
-		select.orderBy = sorting
 
-		renderObj = COA
-		renderObj {
-			10 = CONTENT
-			10 {
-				table = tt_content
-				select {
-					pidInList.field = uid
-					orderBy = sorting
-					where = colPos = 0
-				}
-				wrap = <section id="p{field:uid}" class="content"><div class="container"|</div></section>
-				wrap.insertData = 1
-			}
-		}
+    ## Content
+    20 = COA
+    20 {
+        wrap = <main id="main">|</main>
 
-		wrap = <main role="main">|</main>
-	}
+        ## Content from Homepage
+        10 = CONTENT
+        10 {
+            table = tt_content
+            select {
+                pidInList = 1
+                orderBy = sorting
+                where = colPos = 0
+            }
+            wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+            wrap.insertData = 1
+        }
+        
+        ## Contents from subpages
+        30 = CONTENT
+        30 {
+            table = pages
+            select.orderBy = sorting
+            
+            renderObj = COA
+            renderObj {
+                10 = CONTENT
+                10 {
+                    table = tt_content
+                    select {
+                        pidInList.field = uid
+                        orderBy = sorting
+                        where = colPos = 0
+                    }
+                    wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+                    wrap.insertData = 1
+                }
+            }
+        }
+    }
+
+    ## Footer
+    30 = TEXT
+    30.value (
+        <div id="pagefooter">
+            <div class="container">
+                <p class="text-center">
+                    One Page Demo Template | &copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
+                </p>
+            </div>
+        </div>
+    )
 }
