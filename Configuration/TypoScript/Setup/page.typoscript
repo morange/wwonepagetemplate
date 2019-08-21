@@ -1,0 +1,93 @@
+page = PAGE
+
+page.meta {
+    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+}
+
+page.includeCSS {
+    bootstrap = EXT:wwonepagetemplate/Resources/Public/Css/bootstrap.min.css
+    bootstrap.disableCompression = 1
+    custom = EXT:wwonepagetemplate/Resources/Public/Css/custom.css
+}
+
+page.includeJSFooter {
+    jquery = EXT:wwonepagetemplate/Resources/Public/JavaScript/jquery-3.4.1.min.js
+    popper = EXT:wwonepagetemplate/Resources/Public/JavaScript/popper.min.js
+    bootstrap = EXT:wwonepagetemplate/Resources/Public/JavaScript/bootstrap.bundle.min.js
+    bootstrap.disableCompression = 1
+    custom = EXT:wwonepagetemplate/Resources/Public/JavaScript/custom.js
+}
+
+page {
+    10 = HMENU
+    10 {
+        wrap (
+            <nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            |
+            </ul>
+            </div>
+            </div>
+            </nav>
+        )
+        1 = TMENU
+        1 {
+            NO = 1
+            NO {
+                allWrap = <li class="nav-item">|</li>
+                doNotLinkIt = 1
+
+                stdWrap.cObject = CASE
+                stdWrap.cObject {
+                    key.field = doktype
+                    default = TEXT
+                    default {
+                        typolink.parameter = #p{field:uid}
+                        typolink.parameter.insertData = 1
+                        typolink.ATagParams = class="nav-link"    
+
+                        field = nav_title
+                        ifEmpty.field = title
+                        stdWrap.htmlSpecialChars = 1
+                        typolink.title.field = title // subtitle
+                    }
+                        # External URL
+                    3 = TEXT
+                    3 {
+                        field = nav_title // title
+                        typolink.parameter.field = url
+                        typolink.extTarget.field = target
+                        stdWrap.htmlSpecialChars = 1
+                    }
+                }                
+            }
+        }
+    }
+    20 = CONTENT
+	20 {
+		table = pages
+		select.orderBy = sorting
+
+		renderObj = COA
+		renderObj {
+			10 = CONTENT
+			10 {
+				table = tt_content
+				select {
+					pidInList.field = uid
+					orderBy = sorting
+					where = colPos = 0
+				}
+				wrap = <section id="p{field:uid}" class="content">|</section>
+				wrap.insertData = 1
+			}
+		}
+
+		wrap = <main role="main" class="container">|</main>
+	}
+}
