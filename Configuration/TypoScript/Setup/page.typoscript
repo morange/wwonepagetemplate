@@ -83,11 +83,11 @@ page {
 					orderBy = sorting
 					where = colPos = 0
 				}
-				wrap = <section id="p{field:uid}" class="content">|</section>
+				wrap = <section id="p{field:uid}" class="content"><div class="container"|</div></section>
 				wrap.insertData = 1
 			}
 		}
 
-		wrap = <main role="main" class="container">|</main>
+		wrap = <main role="main">|</main>
 	}
 }

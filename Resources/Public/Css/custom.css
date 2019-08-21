@@ -1,3 +1,10 @@
 main {
     padding-top: 5rem;
 }
+
+.content {
+    padding: 1rem 0;
+}
+.content:nth-child(2n) {
+    background-color: #eee;
+}
