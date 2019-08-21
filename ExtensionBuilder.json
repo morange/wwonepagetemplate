@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "templates",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "wwonepagetemplate",
+        "name": "Onepage Template",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "",
+                "email": "wwagner@wwagner.net",
+                "name": "Wolfgang Wagner",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Wwagner"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-08-21 03:12",
+        "extension_builder_version": "9.10.0",
+        "be_user": " (1)"
+    }
+}
