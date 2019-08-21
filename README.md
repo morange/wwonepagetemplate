@@ -8,7 +8,8 @@ This is only a basic implementation and it's missing some features.
 
 
 1. Install and activate extension
-2. Include static typoscript template
+2. Include the static template from fluid_styled_content
+3. Include the static template of this extension
 
 It only needs a basic site structure:
 
