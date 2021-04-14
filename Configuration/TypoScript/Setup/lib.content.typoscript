@@ -7,7 +7,7 @@ lib.content {
   10 {
     table = tt_content
     select {
-      pidInList = 1
+      pidInList = {$wwonepagetemplate.rootPageId}
       orderBy = sorting
       where = colPos = 0
     }
