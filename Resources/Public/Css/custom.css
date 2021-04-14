@@ -89,3 +89,18 @@ img {
 #pagefooter p {
     margin-bottom: 0;
 }
+
+/* Meta Menu */
+ul.metaMenu {
+  list-style-type: none;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+ul.metaMenu li {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+ul.metaMenu li:last-child {
+  margin: 0;
+}
