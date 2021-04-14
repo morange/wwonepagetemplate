@@ -27,7 +27,7 @@ page {
         wrap (
             <nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="/#main">OnePage</a>
+                    <a class="navbar-brand" href="#maincontent">OnePage</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -53,7 +53,7 @@ page {
                     default {
                         typolink.parameter = #p{field:uid}
                         typolink.parameter.insertData = 1
-                        typolink.ATagParams = class="nav-link"    
+                        typolink.ATagParams = class="nav-link"
 
                         field = nav_title
                         ifEmpty.field = title
@@ -68,7 +68,7 @@ page {
                         typolink.extTarget.field = target
                         stdWrap.htmlSpecialChars = 1
                     }
-                }                
+                }
             }
         }
     }
@@ -76,7 +76,7 @@ page {
     ## Content
     20 = COA
     20 {
-        wrap = <main id="main">|</main>
+        wrap = <main id="maincontent">|</main>
 
         ## Content from Homepage
         10 = CONTENT
@@ -90,13 +90,13 @@ page {
             wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
             wrap.insertData = 1
         }
-        
+
         ## Contents from subpages
         30 = CONTENT
         30 {
             table = pages
             select.orderBy = sorting
-            
+
             renderObj = COA
             renderObj {
                 10 = CONTENT

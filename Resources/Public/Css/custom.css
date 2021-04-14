@@ -3,7 +3,10 @@ main {
 }
 
 .content {
-    padding: 1rem 0;
+    padding: 5rem 0 1rem 0;
+}
+.content:first-child {
+  padding: 1rem 0;
 }
 
 .content:nth-child(2n) {
