@@ -2,7 +2,16 @@
 <f:spaceless>
 	<nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 		<div class="container">
-			<a class="navbar-brand" href="/#maincontent">OnePage</a>
+			<a class="navbar-brand" href="/#maincontent">
+				<f:if condition="{settings.logoFile}">
+					<f:then>
+						<f:image src="{settings.logoFile}" height="40" alt="{settings.logoText}" />
+					</f:then>
+					<f:else>
+						{settings.logoText}
+					</f:else>
+				</f:if>
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>

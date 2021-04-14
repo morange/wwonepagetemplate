@@ -1,0 +1,21 @@
+## General Konstants for the sitepackage
+
+# customcategory=wwonepagetemplate=Onepage Template
+# customsubcategory=logoheader=Logo/Header
+## customsubcategory=socialmedia=Social Media
+## customsubcategory=search=Suche
+
+wwonepagetemplate {
+  # cat = wwonepagetemplate/links; type = int+; label = RootPage ID: IDs der Startseite der Website
+  rootPageId = 1
+
+  # cat = wwonepagetemplate/links; type = int+; label = MetaNav ID: IDs der Startseite der Meta-Navigation
+  metaPageId = 6
+
+  # cat = wwonepagetemplate/logoheader; type = string; label = Logo-Text für den Kopfbereich:Sofern kein Bild ausgegeben wird, wird dieser Text ausgeben. Falls ein Bild ausgegeben wird, wird dieser Text für das alt- und title-Attribut verwendet
+  logoText = Firmenname
+
+  # cat = wwonepagetemplate/logoheader; type = string; label = Logo-Datei:Pfad zu einer Logo Datei, z.B. fileadmin/logo.png oder EXT:wwonepagetemplate/Resources/Public/Images/logo.png
+  logoFile = EXT:wwonepagetemplate/Resources/Public/Images/logo.png
+
+}

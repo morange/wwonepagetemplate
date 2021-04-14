@@ -38,6 +38,6 @@ lib.content {
   }
 }
 
-[6 in tree.rootLineParentIds]
+[{$wwonepagetemplate.metaPageId} in tree.rootLineParentIds]
 lib.content.10.select.pidInList >
 [END]

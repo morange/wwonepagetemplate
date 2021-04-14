@@ -19,7 +19,7 @@ page.includeJSFooter {
     bootstrap.disableCompression = 1
     custom = EXT:wwonepagetemplate/Resources/Public/JavaScript/custom.js
 }
-[6 in tree.rootLineParentIds]
+[{$wwonepagetemplate.metaPageId} in tree.rootLineParentIds]
 page.includeJSFooter.custom >
 [END]
 
@@ -30,5 +30,12 @@ page {
     partialRootPath = EXT:wwonepagetemplate/Resources/Private/Partials/
 
     file = EXT:wwonepagetemplate/Resources/Private/Templates/Default.html
+
+    settings {
+      logoFile = {$wwonepagetemplate.logoFile}
+      logoText = {$wwonepagetemplate.logoText}
+      rootPageId = {$wwonepagetemplate.rootPageId}
+      metaPageId = {$wwonepagetemplate.metaPageId}
+    }
   }
 }
