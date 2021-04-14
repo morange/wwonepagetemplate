@@ -1,4 +1,9 @@
 <?php
+if (!defined('TYPO3_MODE')) {
+    die('Access denied.');
+}
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile('wwonepagetemplate','Configuration/TSconfig/Page.tsconfig','Default PageTSconfig');
 
 $newPageColumns = array(
     'ww_css_id' => array(

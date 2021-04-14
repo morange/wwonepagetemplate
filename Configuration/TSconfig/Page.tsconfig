@@ -1,0 +1,8 @@
+## Default values for new content elements
+mod.wizards.newContentElement.wizardItems.common.elements {
+  textmedia.tt_content_defValues {
+    imageorient = 2
+    imagecols = 1
+    header_layout = 2
+  }
+}
