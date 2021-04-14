@@ -13,7 +13,7 @@ lib.mainMenu {
         key.field = doktype
         default = TEXT
         default {
-          typolink.parameter = /#p{field:uid}
+          typolink.parameter = /#{field:ww_css_id}
           typolink.parameter.insertData = 1
           typolink.ATagParams = class="nav-link"
 

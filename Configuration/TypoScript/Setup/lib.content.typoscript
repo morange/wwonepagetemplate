@@ -11,7 +11,7 @@ lib.content {
       orderBy = sorting
       where = colPos = 0
     }
-    wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+    wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
     wrap.insertData = 1
   }
 
@@ -31,7 +31,7 @@ lib.content {
           orderBy = sorting
           where = colPos = 0
         }
-        wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+        wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
         wrap.insertData = 1
       }
     }

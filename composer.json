@@ -1,29 +1,34 @@
 {
-    "name": "wwagner/wwonepagetemplate",
-    "type": "typo3-cms-extension",
-    "description": "",
-    "authors": [
-        {
-            "name": "Wolfgang Wagner",
-            "role": "Developer"
-        }
-    ],
-    "version": "2.0.0",
-    "require": {
-        "typo3/cms-core": "^10.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Wwagner\\Wwonepagetemplate\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Wwagner\\Wwonepagetemplate\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "wwonepagetemplate": "self.version",
-        "typo3-ter/wwonepagetemplate": "self.version"
-    }
+	"name": "wwagner/wwonepagetemplate",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"authors": [
+		{
+			"name": "Wolfgang Wagner",
+			"role": "Developer"
+		}
+	],
+	"version": "2.0.0",
+	"require": {
+		"typo3/cms-core": "^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Wwagner\\Wwonepagetemplate\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Wwagner\\Wwonepagetemplate\\Tests\\": "Tests"
+		}
+	},
+	"replace": {
+		"wwonepagetemplate": "self.version",
+		"typo3-ter/wwonepagetemplate": "self.version"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "wwonepagetemplate"
+		}
+	}
 }
