@@ -19,110 +19,16 @@ page.includeJSFooter {
     bootstrap.disableCompression = 1
     custom = EXT:wwonepagetemplate/Resources/Public/JavaScript/custom.js
 }
+[6 in tree.rootLineParentIds]
+page.includeJSFooter.custom >
+[END]
 
 page {
-    ## Main navigation
-    10 = HMENU
-    10 {
-        wrap (
-            <nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#maincontent">OnePage</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                        |
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        )
-        1 = TMENU
-        1 {
-            NO = 1
-            NO {
-                allWrap = <li class="nav-item">|</li>
-                doNotLinkIt = 1
+  10 = FLUIDTEMPLATE
+  10 {
+    layoutRootPath = EXT:wwonepagetemplate/Resources/Private/Layouts/
+    partialRootPath = EXT:wwonepagetemplate/Resources/Private/Partials/
 
-                stdWrap.cObject = CASE
-                stdWrap.cObject {
-                    key.field = doktype
-                    default = TEXT
-                    default {
-                        typolink.parameter = #p{field:uid}
-                        typolink.parameter.insertData = 1
-                        typolink.ATagParams = class="nav-link"
-
-                        field = nav_title
-                        ifEmpty.field = title
-                        stdWrap.htmlSpecialChars = 1
-                        typolink.title.field = title // subtitle
-                    }
-                    # External URL
-                    3 = TEXT
-                    3 {
-                        field = nav_title // title
-                        typolink.parameter.field = url
-                        typolink.extTarget.field = target
-                        stdWrap.htmlSpecialChars = 1
-                    }
-                }
-            }
-        }
-    }
-
-    ## Content
-    20 = COA
-    20 {
-        wrap = <main id="maincontent">|</main>
-
-        ## Content from Homepage
-        10 = CONTENT
-        10 {
-            table = tt_content
-            select {
-                pidInList = 1
-                orderBy = sorting
-                where = colPos = 0
-            }
-            wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
-            wrap.insertData = 1
-        }
-
-        ## Contents from subpages
-        30 = CONTENT
-        30 {
-            table = pages
-            select.orderBy = sorting
-
-            renderObj = COA
-            renderObj {
-                10 = CONTENT
-                10 {
-                    table = tt_content
-                    select {
-                        pidInList.field = uid
-                        orderBy = sorting
-                        where = colPos = 0
-                    }
-                    wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
-                    wrap.insertData = 1
-                }
-            }
-        }
-    }
-
-    ## Footer
-    30 = TEXT
-    30.value (
-        <div id="pagefooter">
-            <div class="container">
-                <p class="text-center">
-                    One Page Demo Template | &copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
-                </p>
-            </div>
-        </div>
-    )
+    file = EXT:wwonepagetemplate/Resources/Private/Templates/Default.html
+  }
 }

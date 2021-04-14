@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+	<nav id="mainmenu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="/#maincontent">OnePage</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<f:cObject typoscriptObjectPath="lib.mainMenu" />
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<f:render section="Main" />
+	<div id="pagefooter">
+		<div class="container">
+			<p class="text-center">
+				One Page Demo Template | &copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
+			</p>
+			<f:cObject typoscriptObjectPath="lib.meta" />
+		</div>
+	</div>
+</f:spaceless>
+</html>

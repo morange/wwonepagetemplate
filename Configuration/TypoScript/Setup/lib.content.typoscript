@@ -1,0 +1,43 @@
+## Content
+lib.content = COA
+lib.content {
+
+  ## Content from Homepage
+  10 = CONTENT
+  10 {
+    table = tt_content
+    select {
+      pidInList = 1
+      orderBy = sorting
+      where = colPos = 0
+    }
+    wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+    wrap.insertData = 1
+  }
+
+  ## Contents from subpages
+  30 = CONTENT
+  30 {
+    table = pages
+    select.orderBy = sorting
+
+    renderObj = COA
+    renderObj {
+      10 = CONTENT
+      10 {
+        table = tt_content
+        select {
+          pidInList.field = uid
+          orderBy = sorting
+          where = colPos = 0
+        }
+        wrap = <section id="p{field:uid}" class="content"><div class="container">|</div></section>
+        wrap.insertData = 1
+      }
+    }
+  }
+}
+
+[6 in tree.rootLineParentIds]
+lib.content.10.select.pidInList >
+[END]
