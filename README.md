@@ -12,4 +12,4 @@ This is only a basic implementation and it's missing some features.
 
 It only needs a basic site structure:
 
-![Page Tree](https://bitbucket.org/wowawebdesign/wwonepagetemplate/raw/6608dcad4ecb35eca15d087a33d6470928ed181c/Resources/Public/Images/pagetree.png "Page Tree")
+![Page Tree](https://gitlab.com/wolfgang.wagner/wwonepagetemplate/-/raw/master/Resources/Public/Images/pagetree.png "Page Tree")
