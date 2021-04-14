@@ -16,3 +16,6 @@ It only needs a basic site structure:
 ![Page Tree](https://gitlab.com/wolfgang.wagner/wwonepagetemplate/-/raw/master/Resources/Public/Images/pagetree.png "Page Tree")
 
 Optionally, a subtree for a meta navigation can be created (for example, for the usual pages for the imprint or the privacy policy). Create a page of the type "Folder" or "Separator" for this purpose, then place the additional pages under this page. The ID of the parent page must be adjusted in the constants.
+
+Furthermore, you can optionally include PageTSconfig with a few default settings in the page properties.
+
