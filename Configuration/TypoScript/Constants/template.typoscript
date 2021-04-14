@@ -6,16 +6,16 @@
 ## customsubcategory=search=Suche
 
 wwonepagetemplate {
-  # cat = wwonepagetemplate/links; type = int+; label = RootPage ID: IDs der Startseite der Website
+  # cat = wwonepagetemplate/links; type = int+; label = LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:rootPageId
   rootPageId = 1
 
-  # cat = wwonepagetemplate/links; type = int+; label = MetaNav ID: IDs der Startseite der Meta-Navigation
+  # cat = wwonepagetemplate/links; type = int+; label = LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:metaPageId
   metaPageId = 6
 
-  # cat = wwonepagetemplate/logoheader; type = string; label = Logo-Text für den Kopfbereich:Sofern kein Bild ausgegeben wird, wird dieser Text ausgeben. Falls ein Bild ausgegeben wird, wird dieser Text für das alt- und title-Attribut verwendet
-  logoText = Firmenname
+  # cat = wwonepagetemplate/logoheader; type = string; label = LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:logoText
+  logoText = Onepage Template
 
-  # cat = wwonepagetemplate/logoheader; type = string; label = Logo-Datei:Pfad zu einer Logo Datei, z.B. fileadmin/logo.png oder EXT:wwonepagetemplate/Resources/Public/Images/logo.png
+  # cat = wwonepagetemplate/logoheader; type = string; label = LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:logoFile
   logoFile = EXT:wwonepagetemplate/Resources/Public/Images/logo.png
 
 }
