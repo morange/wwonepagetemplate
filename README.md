@@ -19,3 +19,5 @@ Optionally, a subtree for a meta navigation can be created (for example, for the
 
 Furthermore, you can optionally include PageTSconfig with a few default settings in the page properties.
 
+![PageTSconfig](https://gitlab.com/wolfgang.wagner/wwonepagetemplate/-/raw/master/Resources/Public/Images/pagetsconfig.png "PageTSconfig")
+
