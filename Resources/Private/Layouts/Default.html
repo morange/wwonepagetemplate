@@ -25,7 +25,10 @@
 	<div id="pagefooter">
 		<div class="container">
 			<p class="text-center">
-				{settings.logoText} | &copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
+				<f:if condition="{settings.logoText}">
+					{settings.logoText}&nbsp;|&nbsp;
+				</f:if>
+				&copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
 			</p>
 			<f:render partial="MetaMenu" arguments="{_all}"/>
 		</div>
