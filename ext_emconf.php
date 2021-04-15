@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Onepage Template',
-    'description' => '',
+    'description' => 'This is a small demo one pager template. Take a look at the README for installation instructions.',
     'category' => 'templates',
     'author' => 'Wolfgang Wagner',
     'author_email' => 'wwagner@wwagner.net',
@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.0.1',
+    'version' => '2.0.2',
     'constraints' => [
         'depends' => [
             'typo3' => '10.4.0-10.4.99',
