@@ -2,7 +2,7 @@
 <f:spaceless>
 	<ul class="metaMenu">
 		<f:for each="{metaMenu}" as="item">
-			<li{f:if(condition: item.current, then: 'class="current"')}>
+			<li{f:if(condition: item.current, then: ' class="current"')}>
 				<f:link.page pageUid="{item.data.uid}" title="{item.title}" target="{item.target}">{item.title}</f:link.page>
 			</li>
 		</f:for>
