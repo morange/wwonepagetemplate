@@ -1,7 +1,8 @@
 {
 	"name": "wwagner/wwonepagetemplate",
 	"type": "typo3-cms-extension",
-	"description": "",
+	"description": "This is a small demo one pager template. Take a look at the README for installation instructions.",
+	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Wolfgang Wagner",
