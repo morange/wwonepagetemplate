@@ -13,6 +13,12 @@ main {
     background-color: #eee;
 }
 
+h2.sectionTitle {
+  border-bottom: 2px solid rgba(128,0,0,.3);
+  font-size: 2.2rem;
+  padding: 0 0 .5rem 0;
+  margin: 0 0 2rem 0;
+}
 
 /* Adjustments for fluid_styled_content */
 
