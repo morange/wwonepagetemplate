@@ -11,8 +11,13 @@ lib.content {
       orderBy = sorting
       where = colPos = 0
     }
-    wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
-    wrap.insertData = 1
+    stdWrap {
+      wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
+      wrap.insertData = 1
+      innerWrap = <h2>{page:nav_title // page:title}</h2>|
+      innerWrap.insertData = 1
+      innerWrap.if.isTrue = {$wwonepagetemplate.showPageTitle}
+    }
   }
 
   ## Contents from subpages
@@ -32,8 +37,7 @@ lib.content {
           orderBy = sorting
           where = colPos = 0
         }
-        wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
-        wrap.insertData = 1
+       stdWrap < lib.content.10.stdWrap
       }
     }
   }
