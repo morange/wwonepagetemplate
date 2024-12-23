@@ -19,7 +19,7 @@ Optionally, a subtree for a meta navigation can be created (for example, for the
 
 Furthermore, you can optionally include PageTSconfig with a few default settings in the page properties.
 
-![Site configuration](https://gitlab.com/morange/wwonepagetemplate/Resources/Public/Images/siteset.png "Site configuration")
+![Site configuration](https://github.com/morange/wwonepagetemplate/blob/master/Resources/Public/Images/siteset.png "Site configuration")
 
 ## Problems
 1. delete all previous connections of the template
