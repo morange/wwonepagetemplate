@@ -1,0 +1,33 @@
+page = PAGE
+page {
+
+	## Viewport
+	meta {
+		viewport = width=device-width, initial-scale=1.0
+	}
+
+	## Favicon
+	# shortcutIcon = EXT:swwonepagetemplate/Resources/Public/Images/favicon.ico
+
+	## Metadaten
+	headerData {
+		10 = TEXT
+		10.value (
+<link href="{path:EXT:wwonepagetemplate/Resources/Public/Images/favicon.png}" rel="icon">
+<link href="{path:EXT:wwonepagetemplate/Resources/Public/Images/apple-touch-icon.png}" rel="apple-touch-icon">
+		)
+		10.insertData = 1
+	}
+
+
+	10 = PAGEVIEW
+	10 {
+		paths {
+			100 = EXT:wwonepagetemplate/Resources/Private/Templates/
+		}
+
+		variables {
+
+		}
+	}
+}

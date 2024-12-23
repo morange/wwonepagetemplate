@@ -1,0 +1,5 @@
+lib.contentElement {
+	layoutRootPaths {
+		100 = EXT:wwonepagetemplate/Resources/Private/Extensions/fluid_styled_content/Layouts
+	}
+}

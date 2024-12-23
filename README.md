@@ -4,12 +4,11 @@ A small demo template to realize a "one pager" with TYPO3.
 
 This is only a basic implementation and it's missing still some features.
 
-## Setup
 
-1. Install and activate extension
-2. Include the static template from fluid_styled_content
-3. Include the static template of this extension
-4. Adjust the basic settings for your website in the constants editor
+#ä setup Site Set Configuration
+1. delete all previous connections of the template
+2. create folder for site set: wwonepagetemplate/Configuration/Sets/wwonepagetemplate
+3. define site set with dependencies, here preferably all those that are always required in the site set
 
 It only needs a basic site structure:
 

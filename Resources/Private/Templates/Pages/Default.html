@@ -4,6 +4,10 @@
 <f:spaceless>
 	<f:section name="Main">
 		<main id="maincontent">
+			<f:comment>
+				<f:debug>{_all}</f:debug>
+			{content0 -> f:format.raw()}
+			</f:comment>
 			<f:cObject typoscriptObjectPath="lib.content"/>
 		</main>
 	</f:section>

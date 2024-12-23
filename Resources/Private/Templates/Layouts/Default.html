@@ -1,0 +1,45 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:spaceless>
+	<header>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="mainmenu">
+			<div class="container">
+				<a class="navbar-brand" href="/#maincontent">
+					<f:if condition="{settings.wwonepagetemplate.logoFile}">
+						<f:then>
+							<f:image alt="{settings.wwonepagetemplate.logoText}" height="40" src="{settings.wwonepagetemplate.logoFile}"/>
+						</f:then>
+						<f:else>
+							{settings.wwonepagetemplate.logoText}
+						</f:else>
+					</f:if>
+				</a>
+				<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+				        data-target="#navbarNav" data-toggle="collapse" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<f:render arguments="{_all}" partial="Menu/MainMenu"/>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<content>
+		<f:render section="Main"/>
+	</content>
+	
+	<footer>
+		<div id="pagefooter">
+			<div class="container">
+				<p class="text-center">
+					<f:if condition="{settings.wwonepagetemplate.logoText}">
+						{settings.wwonepagetemplate.logoText}&nbsp;|&nbsp;
+					</f:if>
+					&copy; <a href="https://wwagner.net">Wolfgang Wagner</a>
+				</p>
+				<f:render arguments="{_all}" partial="Menu/MetaMenu"/>
+			</div>
+		</div>
+	</footer>
+</f:spaceless>
+</html>

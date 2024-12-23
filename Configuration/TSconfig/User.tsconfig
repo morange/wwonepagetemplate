@@ -1,4 +1,0 @@
-options {
-  clearCache.pages = 1
-  pageTree.showPageIdWithTitle = 1
-}

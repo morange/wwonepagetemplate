@@ -1,0 +1,19 @@
+page.10.dataProcessing {
+  ## Main Menu
+  10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+  10 {
+    as = mainMenu
+    levels = 1
+    titleField = abstract // description // nav_title // title
+  }
+
+  ## Meta Menu
+  20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+  20 {
+    as = metaMenu
+    special = directory
+    special.value = {$wwonepagetemplate.metaPageId}
+    levels = 1
+    titleField = abstract // description // nav_title // title
+  }
+}

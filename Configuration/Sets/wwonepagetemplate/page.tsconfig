@@ -1,0 +1,2 @@
+## import backendlayouts
+@import "EXT:wwonepagetemplate/Configuration/Sets/wwonepagetemplate/TsConfig/Page/*.tsconfig"

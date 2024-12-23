@@ -1,0 +1,18 @@
+page = PAGE
+page {
+	includeCSS {
+		bootstrap = EXT:wwonepagetemplate/Resources/Public/Css/bootstrap.min.css
+		bootstrap.disableCompression = 1
+		custom = EXT:wwonepagetemplate/Resources/Public/Css/custom.css
+	}
+
+	includeJSFooter {
+		jquery = EXT:wwonepagetemplate/Resources/Public/JavaScript/jquery-3.4.1.min.js
+		jquery.disableCompression = 1
+		popper = EXT:wwonepagetemplate/Resources/Public/JavaScript/popper.min.js
+		popper.disableCompression = 1
+		bootstrap = EXT:wwonepagetemplate/Resources/Public/JavaScript/bootstrap.bundle.min.js
+		bootstrap.disableCompression = 1
+		custom = EXT:wwonepagetemplate/Resources/Public/JavaScript/custom.js
+	}
+}

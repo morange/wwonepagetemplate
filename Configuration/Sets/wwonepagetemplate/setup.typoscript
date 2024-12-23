@@ -1,0 +1,2 @@
+## include TypoScripts
+@import "EXT:wwonepagetemplate/Configuration/Sets/wwonepagetemplate/TypoScript/*.typoscript"

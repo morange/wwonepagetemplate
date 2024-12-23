@@ -1,0 +1,34 @@
+config {
+  absRefPrefix = auto
+  # set Compression activ
+  compressCss = 1
+  concatenateCss = 1
+  compressJs = 1
+  concatenateJs = 1
+  spamProtectEmailAddresses = -6
+
+  # Enable TYPO3 Indexing
+  index_enable = 1
+  index_externals = 1
+  index_metatags = 1
+
+  headerComment (
+your personal extension for the TYPO3 Commnets in the header
+  )
+}
+
+[applicationContext == "Development"]
+  config {
+    # Enable TYPO3 Cache
+    no_cache = 1
+    # Admin Panel
+    admPanel = 1
+
+    # set Compression inactiv
+    contentObjectExceptionHandler = 0
+    compressCss = 0
+    concatenateCss = 0
+    compressJs = 0
+    concatenateJs = 0
+  }
+[END]

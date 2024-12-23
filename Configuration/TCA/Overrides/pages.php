@@ -8,7 +8,7 @@ if (!defined('TYPO3')) {
 $newPageColumns = array(
     'ww_css_id' => array(
         'exclude' => 0,
-        'label' => 'LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:ww_css_id',
+        'label' => 'LLL:EXT:wwonepagetemplate/Resources/Private/Site/Language/locallang.xlf:ww_css_id',
         'config' => array(
             'type' => 'input',
             'size' => 30,
@@ -17,7 +17,7 @@ $newPageColumns = array(
     ),
     'ww_css_class' => array(
         'exclude' => 0,
-        'label' => 'LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:ww_css_class',
+        'label' => 'LLL:EXT:wwonepagetemplate/Resources/Private/Site/Language/locallang.xlf:ww_css_class',
         'config' => array(
             'type' => 'input',
             'size' => 30,
@@ -35,7 +35,7 @@ $GLOBALS['TCA']['pages']['palettes']['wwonepagetemplate'] = array(
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'pages',
-    '--palette--;LLL:EXT:wwonepagetemplate/Resources/Private/Language/locallang.xlf:palettename;wwonepagetemplate,',
+    '--palette--;LLL:EXT:wwonepagetemplate/Resources/Private/Site/Language/locallang.xlf:palettename;wwonepagetemplate,',
     '',
     'after:layout'
 );

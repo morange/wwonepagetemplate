@@ -1,0 +1,8 @@
+TCEFORM {
+	tt_content {
+
+		header_layout {
+			removeItems = 4, 5
+		}
+	}
+}

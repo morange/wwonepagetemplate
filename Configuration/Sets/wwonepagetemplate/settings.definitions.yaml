@@ -1,0 +1,40 @@
+categories:
+  wwonepagetemplate:
+    label: 'Sitepackage OnePager'
+  wwonepagetemplate.pageUids:
+    label: 'Webseite spezifische Page Uids'
+    parent: wwonepagetemplate
+  wwonepagetemplate.pageLogo:
+    label: 'Webseite Logo'
+    parent: wwonepagetemplate
+  
+settings:
+  wwonepagetemplate.rootPageId:
+    category: wwonepagetemplate.pageUids
+    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:rootPageId'
+    type: int
+    default: 1
+  
+  wwonepagetemplate.metaPageId:
+    category: wwonepagetemplate.pageUids
+    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:metaPageId'
+    type: int
+    default: 6
+  
+  wwonepagetemplate.showPageTitle:
+    category: wwonepagetemplate.pageUids
+    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:showPageTitle'
+    type: int
+    default: 0
+  
+  wwonepagetemplate.logoText:
+    category: wwonepagetemplate.pageLogo
+    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:logoText'
+    type: string
+    default: 'Onepage Template'
+
+  wwonepagetemplate.logoFile:
+    category: wwonepagetemplate.pageLogo
+    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:logoFile'
+    type: string
+    default: 'EXT:wwonepagetemplate/Resources/Public/Images/logo.png'
