@@ -39,8 +39,3 @@ settings:
     type: string
     default: 'EXT:wwonepagetemplate/Resources/Public/Images/logo.png'
   
-  wwonepagetemplate.logoHeight:
-    category: 'wwonepagetemplate.pageLogo'
-    label: 'LLL:EXT:wwonepagetemplate/Resources/Private/Templates/Language/locallang.xlf:logoheight'
-    type: int
-    default: 100
