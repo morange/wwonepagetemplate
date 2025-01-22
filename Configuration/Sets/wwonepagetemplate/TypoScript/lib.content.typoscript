@@ -12,10 +12,8 @@ lib.content {
       where = colPos = 0
     }
     stdWrap {
-      if.isLessThan.field = doktype
-      if.value = 3
-      if.isNull.field = doktype
-      if.negate = 1
+      if.isInList.field = doktype
+      if.value = 1
       wrap = <section id="{field:ww_css_id}" class="content {field:ww_css_class}"><div class="container">|</div></section>
       wrap.insertData = 1
       ## show the pagetitle as sectiontitle on page
@@ -49,5 +47,8 @@ lib.content {
 }
 
 [{$wwonepagetemplate.metaPageId} in tree.rootLineParentIds]
-lib.content.10.select.pidInList >
+  lib.content.10 {
+    select.pidInList >
+    stdWrap.if.value =
+  }
 [END]
